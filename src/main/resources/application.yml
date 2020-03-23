@@ -1,0 +1,9 @@
+client_id: 0ad806205b7c02bb9e8b
+client_secret: b26bbdc6b2061fef0bbfc0766e2e012aa0ed82c4
+
+logging:
+  level:
+    root: info
+
+server:
+  port: 8779
