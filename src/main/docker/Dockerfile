@@ -1,4 +1,5 @@
-FROM frolvlad/alpine-oraclejdk8:slim
+FROM openjdk:8-jdk-alpine
 VOLUME /tmp
 ADD github-token.war app.war
-ENTRYPOINT["java", "-jar", "/app.war"]
+ENV JAVA_OPTS=""
+ENTRYPOINT exec java $JAVA_OPTS -Djava.security.egd=file:/dev/./urandom -jar /app.war
